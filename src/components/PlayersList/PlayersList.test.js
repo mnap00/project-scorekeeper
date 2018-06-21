@@ -1,0 +1,54 @@
+import React from 'react';
+import {shallow} from 'enzyme';
+import PlayersList from './PlayersList';
+import Player from '../Player/Player';
+
+it('renders without crashing', () => {
+    shallow(<PlayersList players={[]} />);
+});
+
+it('renders correct number of players', () => {
+    const players = [
+        {
+            name: 'Kunegunde',
+            score: 5
+        },
+        {
+            name: 'Hermenegilde',
+            score: 0
+        }
+    ];
+    const playerComponent = shallow(<PlayersList players={players} />);
+
+    const expectedPlayersNumber = playerComponent.find(Player).length;
+
+    expect(expectedPlayersNumber).toEqual(2);
+});
+
+it('should call onScoreUpdate', () => {
+    const players = [
+        {
+            name: 'Kunegunde',
+            score: 5
+        },
+        {
+            name: 'Hermenegilde',
+            score: 0
+        }
+    ];
+    const mockedOnScoreUpdate = jest.fn();
+
+    const playerComponent = shallow(
+        <PlayersList
+            players={players}
+            onScoreUpdate={mockedOnScoreUpdate}
+        />
+    );
+
+    const firstPlayer = playerComponent.find(Player).last();
+    const onPlayerScoreChange = firstPlayer.prop('onPlayerScoreChange');
+
+    onPlayerScoreChange(8);
+
+    expect(mockedOnScoreUpdate).toBeCalledWith(1, 8);
+});
