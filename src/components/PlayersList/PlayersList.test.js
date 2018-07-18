@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import React from 'react';
 import {shallow} from 'enzyme';
 import PlayersList from './PlayersList';
@@ -45,8 +46,8 @@ it('should call onScoreUpdate', () => {
         />
     );
 
-    const firstPlayer = playerComponent.find(Player).last();
-    const onPlayerScoreChange = firstPlayer.prop('onPlayerScoreChange');
+    const lastPlayer = playerComponent.find(Player).last();
+    const onPlayerScoreChange = lastPlayer.prop('onPlayerScoreChange');
 
     onPlayerScoreChange(8);
 

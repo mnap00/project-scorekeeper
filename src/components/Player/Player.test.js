@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import React from 'react';
 import {shallow} from 'enzyme';
 import Player from './Player';
@@ -37,15 +38,15 @@ it('should call onPlayerScoreChange with 1 when plus button is clicked', () => {
     expect(mockedOnPlayerScoreChange).toBeCalledWith(1);
 });
 
-it('should call onPlayerScoreChange with 1 when minus button is clicked', () => {
+it('should call onPlayerScoreChange with -1 when minus button is clicked', () => {
     const mockedOnPlayerScoreChange = jest.fn();
     const playerComponent = shallow(
         <Player onPlayerScoreChange={mockedOnPlayerScoreChange} />
     );
 
-    const plusButton = playerComponent.find('.Player__button').last();
+    const minusButton = playerComponent.find('.Player__button').last();
 
-    plusButton.simulate('click');
+    minusButton.simulate('click');
 
     expect(mockedOnPlayerScoreChange).toBeCalledWith(-1);
 });
