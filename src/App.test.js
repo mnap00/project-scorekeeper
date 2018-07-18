@@ -38,3 +38,25 @@ it('should add new player', () => {
     expect(players[0].name).toEqual('Anne');
     expect(players[0].score).toEqual(0);
 });
+
+it('should remove player', () => {
+    const appComponent = shallow(<App />);
+    const players = [
+        {
+            name: 'Kunegunde',
+            score: 5
+        },
+        {
+            name: 'Hermenegilde',
+            score: 0
+        }
+    ];
+    appComponent.setState({players});
+
+    const onPlayerRemove = appComponent.find(PlayersList).prop('onPlayerRemove');
+    onPlayerRemove(0);
+
+    const playersAfterRemove = appComponent.state().players;
+
+    expect(playersAfterRemove.length).toEqual(1);
+});
