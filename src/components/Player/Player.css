@@ -1,0 +1,51 @@
+.Player {
+    display: flex;
+    margin-top: 5px;
+}
+
+.Player__name,
+.Player__score,
+.Player__button {
+    border: none;
+    border-radius: 2px;
+    color: #2d3436;
+    padding: 5px;
+}
+
+.Player__name {
+    flex: 7;
+}
+
+.Player__score {
+    flex: 2;
+    margin-left: 5px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.Player__button {
+    cursor: pointer;
+    flex: 1;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.Player:nth-of-type(odd) .Player__name,
+.Player:nth-of-type(odd) .Player__score,
+.Player:nth-of-type(odd) .Player__button {
+    background-color: #81ecec;
+}
+
+.Player:nth-of-type(even) .Player__name,
+.Player:nth-of-type(even) .Player__score,
+.Player:nth-of-type(even) .Player__button {
+    background-color: #74b9ff;
+}
+
+.Player:nth-of-type(odd) .Player__button:hover {
+    background-color: #00cec9;
+}
+
+.Player:nth-of-type(even) .Player__button:hover {
+    background-color: #0984e3;
+}
