@@ -1,0 +1,16 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: 620px;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+.App__title {
+    background-color: #a29bfe;
+    border-radius: 2px;
+    color: #2d3436;
+    text-align: center;
+}

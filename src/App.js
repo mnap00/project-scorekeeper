@@ -46,6 +46,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <h1 className="App__title">Score Keeper</h1>
                 <AddPlayer onPlayerAdd={this.onPlayerAdd} />
                 <PlayersList
                     players={this.state.players}
