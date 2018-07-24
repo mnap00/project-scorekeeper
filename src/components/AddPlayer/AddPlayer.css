@@ -1,0 +1,37 @@
+.AddPlayer {
+    display: flex;
+}
+
+.AddPlayer__input,
+.AddPlayer__submit {
+    background-color: #dfe6e9;
+    border: 0;
+    border-radius: 2px;
+    color: #2d3436;
+    font: inherit;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.AddPlayer__input {
+    flex: 5;
+    padding: 5px;
+}
+
+.AddPlayer__submit {
+    cursor: pointer;
+    flex: 1;
+    margin-left: 5px;
+}
+
+.AddPlayer__input:hover,
+.AddPlayer__input:focus {
+    background-color: #ffeaa7;
+    outline: 0;
+}
+
+.AddPlayer__submit:hover,
+.AddPlayer__submit:focus {
+    background-color: #636e72;
+    color: #dfe6e9;
+}
