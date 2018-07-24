@@ -1,5 +1,20 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+* {
+    box-sizing: border-box;
+}
+
+body,
+li,
+ol,
+ul {
+    background-color: #2d3436;
+    font-family: 'Rubik', sans-serif;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+ol,
+ul {
+    list-style: none;
 }
