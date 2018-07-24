@@ -1,6 +1,8 @@
 # Score Keeper
 An application to practice Jest unit tests for React.
 
+[Github pages](https://mnap00.github.io/project-scorekeeper/)
+
 ## Content
 
 ### Tests organisation
