@@ -26,6 +26,7 @@
 .Player__button {
     cursor: pointer;
     flex: 1;
+    font: inherit;
     margin-left: 5px;
     text-align: center;
 }
@@ -42,10 +43,12 @@
     background-color: #74b9ff;
 }
 
-.Player:nth-of-type(odd) .Player__button:hover {
+.Player:nth-of-type(odd) .Player__button:hover,
+.Player:nth-of-type(odd) .Player__button:focus {
     background-color: #00cec9;
 }
 
-.Player:nth-of-type(even) .Player__button:hover {
+.Player:nth-of-type(even) .Player__button:hover,
+.Player:nth-of-type(even) .Player__button:focus {
     background-color: #0984e3;
 }
