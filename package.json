@@ -2,12 +2,15 @@
   "name": "mod-24.6-tests-react-scorekeeper",
   "version": "0.6.1",
   "private": true,
+  "homepage": "https://mnap00.github.io/project-scorekeeper",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -o project",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -16,6 +19,7 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "gh-pages": "^1.2.0",
     "react-test-renderer": "^16.4.1"
   }
 }
