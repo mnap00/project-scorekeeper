@@ -8,8 +8,8 @@ it('renders without crashing', () => {
 });
 
 it('should return player name', () => {
-    const onPlayerAdd = jest.fn();
-    const addPlayerComponent = mount(<AddPlayer onPlayerAdd={onPlayerAdd} />);
+    const mockedOnPlayerAdd = jest.fn();
+    const addPlayerComponent = mount(<AddPlayer onPlayerAdd={mockedOnPlayerAdd} />);
 
     const nameInput = addPlayerComponent.find('input').first().getDOMNode();
     nameInput.value = 'Anne';
@@ -17,5 +17,5 @@ it('should return player name', () => {
     const form = addPlayerComponent.find('form');
     form.simulate('submit');
 
-    expect(onPlayerAdd).toBeCalledWith('Anne');
+    expect(mockedOnPlayerAdd).toBeCalledWith('Anne');
 });
