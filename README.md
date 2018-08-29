@@ -1,15 +1,16 @@
 # Score Keeper
+
+## Content
+
 An application to practice Jest unit tests for React.
 
 [Github pages](https://mnap00.github.io/project-scorekeeper/)
 
-## Content
-
-### Tests organisation
+### Tests' setup/organization
 * `component.test.js` for each `component.js` in the same directory
 * Enzyme library for DOM manipulation
 
-### Tests implemented
+### Implemented tests
 * smoke tests (test if components render properly) for App and each component in `components` directory
 * tests for each method of App class
 * tests for props of each component from `components` directory
