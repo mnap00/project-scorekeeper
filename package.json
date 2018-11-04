@@ -1,6 +1,6 @@
 {
   "name": "mod-24.6-tests-react-scorekeeper",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
   "homepage": "https://mnap00.github.io/project-scorekeeper",
   "dependencies": {
